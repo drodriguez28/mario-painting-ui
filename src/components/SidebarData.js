@@ -1,10 +1,8 @@
 import React from 'react'
-// import { FaBars } from "react-icons/fa";
-import { AiFillHome, AiFillFormatPainter } from "react-icons/ai";
-// import { AiOutlineClose } from "react-icons/io";
+import { AiFillHome, AiFillFormatPainter, AiFillContacts } from "react-icons/ai";
 
 
-export const SideBarData = [
+export const SidebarData = [
     {
         title: 'Home',
         path: '/',
@@ -24,3 +22,5 @@ export const SideBarData = [
         cName:'nav-text'
     }
 ]
+
+

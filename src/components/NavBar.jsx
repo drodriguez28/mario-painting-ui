@@ -2,7 +2,9 @@ import React, {useState} from "react";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import {SideNavData} from "./SideNavData";
+import {SidebarData} from '../components/SidebarData';
+import './NavBar.css';
+import {IconContext} from 'react-icons';
 
 function NavBar() {
 
@@ -11,18 +13,19 @@ const [sidebar, setSidebar] = useState(false);
 const showSidebar = () => setSidebar(!sidebar)
   return (
     <>
+    <IconContext.Provider value={{color: 'white'}}>
       <div className="navbar">
         <Link to="#" className="menu-bars">
           <FaBars onClick={showSidebar}/>
         </Link>
       </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className="nav-menu-items">
+        <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
             <AiOutlineClose />
             <Link to="#" className="menu-bars"></Link>
           </li>
-          {SideNavData.map((item, index) => {
+          {SidebarData.map((item, index) => {
               return (
                   <li key={index} className={item.cName}>
                       <Link to= {item.path}>
@@ -34,6 +37,7 @@ const showSidebar = () => setSidebar(!sidebar)
           })}
         </ul>
       </nav>
+      </IconContext.Provider>
     </>
   );
 }
