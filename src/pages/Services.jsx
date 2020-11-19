@@ -2,10 +2,15 @@ import React from 'react'
 
 function Services() {
     return (
-        <div className='services'>
+        <div className='services-items'>
+            <h1>Services</h1> 
+<div>
+            <span>Exterior Painting</span>
 
-            <h1>Services</h1>
-            
+</div>
+    <div>
+    <span>Interior Painting</span>
+        </div>        
         </div>
     )
 }
