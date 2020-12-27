@@ -20,11 +20,16 @@
 .home {
   color: black;
   font-size: 24px;
+  text-align: center;
 }
 
 .services-items {
   text-align: center;
   font-size: 24px;
+}
+
+.App {
+  text-align: center;
 }
 
 
