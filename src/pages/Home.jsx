@@ -2,8 +2,10 @@ import React from 'react';
 
 function Home() {
     return (
-        <div className = "home">
-            <h1>Mario's Painting </h1>
+        <div className="home-items">
+            <h1><img src='./logo.jpeg' />
+            </h1>
+
         </div>
     )
 }
