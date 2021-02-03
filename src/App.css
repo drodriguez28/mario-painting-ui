@@ -28,6 +28,17 @@
   font-size: 24px;
 }
 
+.painting-contact-card {
+  justify-content: center;
+  font-size: 24px;
+}
+
+.ant-card-head-title {
+  font-size: 23px;
+  color: red;
+
+}
+
 
 .services-items {
   text-align: center;
