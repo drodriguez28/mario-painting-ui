@@ -6,39 +6,48 @@ const { TextArea } = Input;
 function ContactUs() {
   const contactMethodOptions = [
     { label: "Email", value: "Email" },
-    { label: "Phone", value: "Phone" }
+    { label: "Phone", value: "Phone" },
   ];
 
-  const typeofSericeOptions = [
+  const typeofServiceOptions = [
     { label: "Interior", value: "Interior" },
-    { label: "Exterior", value: "Exterior" }
+    { label: "Exterior", value: "Exterior" },
   ];
-
-
-
 
   return (
     <div className="contact-us-items">
       <h1>Contact Us</h1>
       <Row className="painting-contact-card">
-        <Col span={15}>
+        <Col span={10}>
           <Card
-            title="Free Contactless Quote"
-            style={{ width: 300 }}
+            title="Insert Info for an Estimate !"
+            style={{ width: 600 }}
             headStyle={{ fontWeight: "bold" }}
           >
             <Row>
               <Col span={25}>
-                <Form.Item label="Client Name" style={{ fontWeight: "bold" }}>
+                <Form.Item label="First Name" style={{ fontWeight: "bold" }}>
+                  <Input style={{ width: 200 }}></Input>
+                </Form.Item>
+                <Form.Item label="Last Name" style={{ fontWeight: "bold" }}>
                   <Input style={{ width: 200 }}></Input>
                 </Form.Item>
                 <Form.Item label="Email Address" style={{ fontWeight: "bold" }}>
                   <Input style={{ width: 200 }}></Input>
                 </Form.Item>
-                <Form.Item label="Phone Number" style={{ fontWeight: "bold" }}>
+                <Form.Item
+                  label=" Street Address"
+                  style={{ fontWeight: "bold" }}
+                >
+                  <Input style={{ width: 200 }}></Input>
+                </Form.Item>
+                <Form.Item label="City" style={{ fontWeight: "bold" }}>
                   <Input style={{ width: 200 }}></Input>
                 </Form.Item>
                 <Form.Item label="Zip Code" style={{ fontWeight: "bold" }}>
+                  <Input style={{ width: 160 }}></Input>
+                </Form.Item>
+                <Form.Item label="Phone Number" style={{ fontWeight: "bold" }}>
                   <Input style={{ width: 200 }}></Input>
                 </Form.Item>
 
@@ -49,12 +58,11 @@ function ContactUs() {
                   <Radio.Group options={contactMethodOptions}></Radio.Group>
                 </Form.Item>
 
-
                 <Form.Item
-                  label="Type of Painting Service "
+                  label="Type of Painting Service (if both check both)"
                   style={{ fontWeight: "bold" }}
                 >
-                  <Checkbox.Group options={typeofSericeOptions}   />
+                  <Checkbox.Group options={typeofServiceOptions} />
                 </Form.Item>
 
                 <Form.Item
@@ -64,7 +72,9 @@ function ContactUs() {
                   <TextArea rows={4}></TextArea>
                 </Form.Item>
 
-                <Button type="primary" className="submit-button">Submit</Button>
+                <Button type="primary" className="submit-button">
+                  Submit
+                </Button>
               </Col>
             </Row>
           </Card>
