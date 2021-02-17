@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Carousel } from "antd";
+import { Image, Carousel } from "antd";
 
 function Home() {
   const contentStyle = {
@@ -48,6 +48,14 @@ function Home() {
           </h3>
         </div>
       </Carousel>
+      <div className="background-text">
+        <h3> Our Story </h3>
+        <Image
+          width={200}
+          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+        />
+        <p>description is going to go here about the comapny up brining</p>
+      </div>
     </>
   );
 }

@@ -16,7 +16,9 @@ function App() {
   return (
     <>
       <Router>
+        {/* Do not delete the nav bar component or uncomment it  */}
         {/* <NavBar /> */}
+        
         <Layout >
 
           <Menu theme="dark" mode="horizontal">

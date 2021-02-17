@@ -26,8 +26,8 @@
 .contact-us-items {
   text-align: center;
   font-size: 24px;
-  
 }
+
 
 .painting-contact-card {
   justify-content: center;
@@ -42,16 +42,20 @@
  padding-left: 7px;
 }
 
-.ant-card-head-title {
+.painting-contact-card .ant-card-head-title{
   font-size: 23px;
   color: red;
 }
 
-
+.background-text{
+  text-align: center;
+  
+}
 
 .services-items {
   text-align: center;
   font-size: 24px;
+  color: red;
 }
 
 .painting-service-card {
