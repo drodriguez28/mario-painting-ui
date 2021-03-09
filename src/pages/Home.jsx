@@ -52,7 +52,7 @@ function Home() {
         <h3> Our Story </h3>
         <Image
           width={200}
-          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          src="./homepic.jpeg"
         />
         <p>
           {" "}

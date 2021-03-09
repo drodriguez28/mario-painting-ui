@@ -9,14 +9,9 @@ function Services() {
       <h1>Services</h1>
       <Row className="painting-service-card">
         <Col span={6}>
-          {/* <div>
-
-        <p>click photo to see interior work we've done !</p>
-
-          </div> */}
           <Card
             hoverable
-            style={{ width: 240 }}
+            style={{ width: 300 }}
             cover={
               <img
                 alt="example"
@@ -31,13 +26,9 @@ function Services() {
           </Card>
         </Col>
         <Col span={6}>
-          {/* <div>
-        <p>click photo to see exterior work we've done !</p>
-
-          </div> */}
           <Card
             hoverable
-            style={{ width: 240 }}
+            style={{ width: 300 }}
             cover={
               <img
                 alt="example"
