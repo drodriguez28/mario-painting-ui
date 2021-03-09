@@ -54,7 +54,22 @@ function Home() {
           width={200}
           src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
         />
-        <p>description is going to go here about the comapny up brining</p>
+        <p>
+          {" "}
+          In the year 1998 , Mario Rodriguez immigrated to the United States
+          with his wife to seek a better opportunities and a better future.
+          Immigrating to the U.S with 10 cents in his pocket, he began to search
+          for a job and started working for a painting company in metro Atlanta.
+          Around the time of the great recession in the US, Mario was let go
+          from his job due to the financial crisis. At the time he had to
+          provide his two kids and wife, and starting job hunting around
+          especially in the painting industry. Two months later a woman named
+          Cathy Petretti, presented a idea for him to become a freelancer. Cathy
+          started to spread the word to teachers around the school (where she
+          worked at) if anyone needed some painting work done at their home.
+          Soon enough Mario got calls and started working as a freelancer and
+          created the company Mario's Painting of Roswell.
+        </p>
       </div>
     </>
   );

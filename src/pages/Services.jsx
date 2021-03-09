@@ -9,6 +9,11 @@ function Services() {
       <h1>Services</h1>
       <Row className="painting-service-card">
         <Col span={6}>
+          {/* <div>
+
+        <p>click photo to see interior work we've done !</p>
+
+          </div> */}
           <Card
             hoverable
             style={{ width: 240 }}
@@ -19,12 +24,17 @@ function Services() {
               />
             }
           >
-            <Meta title="Interior Painting " 
-            description="At Mario's Painting of Roswell, our expert interior painters know the first step is finding the perfect color.We have an extensive selection of colors, shades, and tones available in the quality paints and finishes offered by Sherwin Williams and Benjamin Moore. We can even give you an opportunity to test a color by applying a sample before work begins." 
+            <Meta
+              title="Interior Painting "
+              description="At Mario's Painting of Roswell, our expert interior painters know the first step is finding the perfect color.We have an extensive selection of colors, shades, and tones available in the quality paints and finishes offered by Sherwin Williams and Benjamin Moore. We can even give you an opportunity to test a color by applying a sample before work begins."
             />
           </Card>
         </Col>
         <Col span={6}>
+          {/* <div>
+        <p>click photo to see exterior work we've done !</p>
+
+          </div> */}
           <Card
             hoverable
             style={{ width: 240 }}
@@ -35,8 +45,9 @@ function Services() {
               />
             }
           >
-            <Meta title="Exterior Painting " 
-            description="Whether your exterior is a chipped, fading mess, or you could simply use an exterior update, you can count on Mario's Painting of Roswell for unmatched results. Our combination of industry expertise, and top-notch products have made us the first choice of exterior painters for homeowners in metro Atlanta areas." 
+            <Meta
+              title="Exterior Painting "
+              description="Whether your exterior is a chipped, fading mess, or you could simply use an exterior update, you can count on Mario's Painting of Roswell for unmatched results. Our combination of industry expertise, and top-notch products have made us the first choice of exterior painters for homeowners in metro Atlanta areas."
             />
           </Card>
         </Col>
