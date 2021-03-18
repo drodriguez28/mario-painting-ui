@@ -1,9 +1,34 @@
-import React from "react";
-import { Row, Col, Card, Form, Input, Radio, Checkbox, Button } from "antd";
+import React, { useState } from "react";
+import {
+  Row,
+  Col,
+  Card,
+  Form,
+  Input,
+  Radio,
+  Checkbox,
+  Button,
+  Modal,
+  Alert,
+} from "antd";
 
 const { TextArea } = Input;
 
 function ContactUs() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   const contactMethodOptions = [
     { label: "Email", value: "Email" },
     { label: "Phone", value: "Phone" },
@@ -14,9 +39,22 @@ function ContactUs() {
     { label: "Exterior", value: "Exterior" },
   ];
 
+  const displaySuccessAlert = () => {
+      return (
+        <Alert
+          message="Your information was successfully recorded."
+          type="success"
+          showIcon
+          closable
+        />
+      );
+    };
+
   return (
     <div className="contact-us-items">
       <h1>Contact Us</h1>
+
+      {displaySuccessAlert()}
       <Row className="painting-contact-card">
         <Col span={10}>
           <Card
@@ -72,9 +110,17 @@ function ContactUs() {
                   <TextArea rows={4}></TextArea>
                 </Form.Item>
 
-                <Button type="primary" className="submit-button">
+                <Button type="primary" onClick={showModal}>
                   Submit
                 </Button>
+                <Modal
+                  title="Please confirm"
+                  visible={isModalVisible}
+                  onOk={handleOk}
+                  onCancel={handleCancel}
+                >
+                  <p>Are you sure the information you provided is correct ?</p>
+                </Modal>
               </Col>
             </Row>
           </Card>
