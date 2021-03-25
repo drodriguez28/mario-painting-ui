@@ -14,8 +14,9 @@ import {
 
 const { TextArea } = Input;
 
-function ContactUs() {
+const ContactUs = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [successBannerAlert, setSuccessBannerAlert] = useState(false);
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -23,6 +24,7 @@ function ContactUs() {
 
   const handleOk = () => {
     setIsModalVisible(false);
+    setSuccessBannerAlert(true);
   };
 
   const handleCancel = () => {
@@ -40,6 +42,7 @@ function ContactUs() {
   ];
 
   const displaySuccessAlert = () => {
+    if (successBannerAlert) {
       return (
         <Alert
           message="Your information was successfully recorded."
@@ -48,7 +51,10 @@ function ContactUs() {
           closable
         />
       );
-    };
+    } else {
+      return null;
+    }
+  };
 
   return (
     <div className="contact-us-items">
@@ -128,6 +134,6 @@ function ContactUs() {
       </Row>
     </div>
   );
-}
+};
 
 export default ContactUs;
