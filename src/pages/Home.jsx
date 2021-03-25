@@ -15,7 +15,7 @@ function Home() {
     <>
       <div className="home-items">
         <h1>
-          <img src="./logo.jpeg" />
+          <img src="./logo.jpeg" alt=""/>
         </h1>
       </div>
 
