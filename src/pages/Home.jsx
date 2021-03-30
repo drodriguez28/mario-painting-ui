@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Image, Carousel } from "antd";
+import { Image, Carousel, Row } from "antd";
 
 function Home() {
   const contentStyle = {
@@ -13,11 +13,9 @@ function Home() {
 
   return (
     <>
-      <div className="home-items">
-        <h1>
-          <img src="./logo.jpeg" alt=""/>
-        </h1>
-      </div>
+      <Row className = "home-items">
+        <img src="./logo.jpeg" class="logo-image" alt="" />
+      </Row>
 
       <Carousel autoplay>
         <div>
@@ -48,12 +46,10 @@ function Home() {
           </h3>
         </div>
       </Carousel>
+
       <div className="background-text">
         <h3> Our Story </h3>
-        <Image
-          width={200}
-          src="./homepic.jpeg"
-        />
+        <Image width={200} src="./homepic.jpeg" />
         <p>
           {" "}
           In the year 1998 , Mario Rodriguez immigrated to the United States
