@@ -3,7 +3,7 @@ import { Card, Row, Col } from "antd";
 
 const { Meta } = Card;
 
-function Services() {
+const Services = () => {
   return (
     <div className="services-items">
       <h1>Services</h1>

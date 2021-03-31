@@ -12,7 +12,7 @@ const { Header, Content, Footer } = Layout;
 
 
 
-function App() {
+const App = () => {
   return (
     <>
       <Router>

@@ -2,7 +2,7 @@ import React from "react";
 
 import { Image, Carousel, Row } from "antd";
 
-function Home() {
+const Home = () => {
   const contentStyle = {
     height: "200px",
     color: "#fff",
