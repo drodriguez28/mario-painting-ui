@@ -8,7 +8,7 @@ function Services() {
     <div className="services-items">
       <h1>Services</h1>
       <Row className="painting-service-card">
-        <Col span={6}>
+        <Col xs={24} xl={8}>
           <Card
             hoverable
             style={{ width: 300 }}
@@ -25,7 +25,7 @@ function Services() {
             />
           </Card>
         </Col>
-        <Col span={6}>
+        <Col xs={24} xl={8}>
           <Card
             hoverable
             style={{ width: 300 }}
