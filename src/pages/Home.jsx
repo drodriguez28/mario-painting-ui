@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-      <Row className = "home-items">
+      <Row className="home-items">
         <img src="./logo.jpeg" class="logo-image" alt="" />
       </Row>
 
@@ -47,9 +47,13 @@ const Home = () => {
         </div>
       </Carousel>
 
-      <div className="background-text">
+      <div className="home-page-story">
         <h3> Our Story </h3>
+      </div>
+
+      <div className="background-text">
         <Image width={200} src="./homepic.jpeg" />
+
         <p>
           {" "}
           In the year 1998 , Mario Rodriguez immigrated to the United States
@@ -69,6 +73,6 @@ const Home = () => {
       </div>
     </>
   );
-}
+};
 
 export default Home;

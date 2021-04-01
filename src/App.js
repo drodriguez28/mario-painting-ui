@@ -16,10 +16,10 @@ const App = () => {
   return (
     <>
       <Router>
+
+        <Layout >
         {/* Do not delete the nav bar component or uncomment it  */}
         {/* <NavBar /> */}
-        
-        <Layout >
 
           <Menu theme="dark" mode="horizontal">
             <Menu.Item key="1">
@@ -43,19 +43,19 @@ const App = () => {
             <Header style={{ background: "#fff", padding: 0 }} />
             <Content >
               <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
-              <Switch>
-                <Route path='/' exact component={Home} />
+                <Switch>
+                  <Route path='/' exact component={Home} />
 
-              </Switch>
-              <Switch>
-                <Route path='/services' exact component={Services} />
+                </Switch>
+                <Switch>
+                  <Route path='/services' exact component={Services} />
 
-              </Switch>
+                </Switch>
 
-              <Switch>
-                <Route path='/contact-us' exact component={ContactUs} />
+                <Switch>
+                  <Route path='/contact-us' exact component={ContactUs} />
 
-              </Switch>
+                </Switch>
               </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>
