@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Image, Carousel, Row, Button } from "antd";
 
-import { Image, Carousel, Row } from "antd";
 
 const Home = () => {
   const contentStyle = {
@@ -16,6 +17,14 @@ const Home = () => {
       <Row className="home-items">
         <img src="./logo.jpeg" class="logo-image" alt="" />
       </Row>
+
+      <div className="get-free-quote-button">
+        <Link to="/contact-us">
+          <Button type="primary" shape="round" size="large" to="/contact-us">
+            GET FREE ESTIMATE NOW
+          </Button>
+        </Link>
+      </div>
 
       <Carousel autoplay>
         <div>
