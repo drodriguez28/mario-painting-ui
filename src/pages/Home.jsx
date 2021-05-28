@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <>
       <Row className="home-items">
-        <img src="./logo.jpeg" class="logo-image" alt="" />
+        <img src="./logo.jpeg" className="logo-image" alt="" />
       </Row>
 
       <div className="get-free-quote-button">

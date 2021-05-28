@@ -43,7 +43,7 @@ const Services = () => {
           </Card>
         </Col>
         <Col xs={24} xl={8}>
-          <img src="./paintbrands.jpeg" alt="" class="paint-brands-image" />
+          <img src="./paintbrands.jpeg" alt="" className="paint-brands-image" />
         </Col>
       </Row>
     </div>
