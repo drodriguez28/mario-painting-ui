@@ -17,6 +17,9 @@ const { TextArea } = Input;
 const ContactUs = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [successBannerAlert, setSuccessBannerAlert] = useState(false);
+  const [input, setInput] = useState({ firstName: '', lastName: '' , emailAddy:'', streetAddy:'', cityLc: '', additionalText:'' });
+
+
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -30,6 +33,16 @@ const ContactUs = () => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
+  const _handleChange = e => {
+    setInput({ ...input, [e.target.name]: e.target.value });
+  };
+
+  function _handleSubmit(e) {
+    e.preventDefault();
+    setInput("");
+    handleOk("");
+  }
 
   const contactMethodOptions = [
     { label: "Email", value: "Email" },
@@ -62,25 +75,25 @@ const ContactUs = () => {
 
       {displaySuccessAlert()}
       <Row className="painting-contact-card">
-        <Col xs={24} xl={8}>
+        <Col xs={24} xl={8} >
           <Card
             title="Insert Info for an Estimate !"
             headStyle={{ fontWeight: "bold" }}
           >
-            <Form.Item label="First Name" style={{ fontWeight: "bold" }}>
-              <Input style={{ width: 300 }}></Input>
+            <Form.Item label="First Name" style={{ fontWeight: "bold" }} >
+              <Input value={input.firstName} onChange={_handleChange} name={'firstName'} style={{ width: 300 }}></Input>
             </Form.Item>
-            <Form.Item label="Last Name" style={{ fontWeight: "bold" }}>
-              <Input style={{ width: 300 }}></Input>
+            <Form.Item label="Last Name" style={{ fontWeight: "bold" }} >
+              <Input value={input.lastName} onChange={_handleChange} name={'lastName'} style={{ width: 300 }}></Input>
             </Form.Item>
             <Form.Item label="Email Address" style={{ fontWeight: "bold" }}>
-              <Input style={{ width: 300 }}></Input>
+              <Input value={input.emailAddy} onChange={_handleChange} name={'emailAddy'} style={{ width: 300 }}></Input>
             </Form.Item>
             <Form.Item label=" Street Address" style={{ fontWeight: "bold" }}>
-              <Input style={{ width: 300 }}></Input>
+              <Input value={input.streetAddy} onChange={_handleChange} name={'streetAddy'} style={{ width: 300 }}></Input>
             </Form.Item>
             <Form.Item label="City" style={{ fontWeight: "bold" }}>
-              <Input style={{ width: 300 }}></Input>
+              <Input value={input.cityLc} onChange={_handleChange} name={'cityLc'} style={{ width: 300 }}></Input>
             </Form.Item>
             <Form.Item label="Zip Code" style={{ fontWeight: "bold" }}>
               <Input style={{ width: 160 }}></Input>
@@ -107,7 +120,7 @@ const ContactUs = () => {
               label=" Additional Messages"
               style={{ fontWeight: "bold" }}
             >
-              <TextArea rows={4}></TextArea>
+              <TextArea value={input.additionalText} onChange={_handleChange} name={'additionalText'} rows={4}></TextArea>
             </Form.Item>
 
             <Button type="primary" onClick={showModal}>
@@ -116,7 +129,7 @@ const ContactUs = () => {
             <Modal
               title="Please confirm"
               visible={isModalVisible}
-              onOk={handleOk}
+              onOk={_handleSubmit}
               onCancel={handleCancel}
             >
               <p>Are you sure the information you provided is correct ?</p>
