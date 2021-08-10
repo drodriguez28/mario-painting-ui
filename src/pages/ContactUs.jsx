@@ -17,8 +17,7 @@ const { TextArea } = Input;
 const ContactUs = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [successBannerAlert, setSuccessBannerAlert] = useState(false);
-  const [input, setInput] = useState({ firstName: '', lastName: '' , emailAddy:'', streetAddy:'', cityLc: '', additionalText:'' });
-
+  const [input, setInput] = useState({ firstName: '', lastName: '', emailAddy: '', streetAddy: '', cityLc: '', additionalText: '', zipCode: '', phoneNumber: '' });
 
 
   const showModal = () => {
@@ -96,16 +95,16 @@ const ContactUs = () => {
               <Input value={input.cityLc} onChange={_handleChange} name={'cityLc'} style={{ width: 300 }}></Input>
             </Form.Item>
             <Form.Item label="Zip Code" style={{ fontWeight: "bold" }}>
-              <Input style={{ width: 160 }}></Input>
+              <Input value={input.zipCode} onChange={_handleChange} name={'zipCode'} style={{ width: 160 }}></Input>
             </Form.Item>
             <Form.Item label="Phone Number" style={{ fontWeight: "bold" }}>
-              <Input style={{ width: 300 }}></Input>
+              <Input value={input.phoneNumber} onChange={_handleChange} name={'phoneNumber'} style={{ width: 300 }}></Input>
             </Form.Item>
 
             <Form.Item
-              label="Preferred Contact Method"
-              style={{ fontWeight: "bold" }}
-            >
+                  label="Preferred Contact Method"
+                  style={{ fontWeight: "bold" }}
+                >
               <Radio.Group options={contactMethodOptions}></Radio.Group>
             </Form.Item>
 
